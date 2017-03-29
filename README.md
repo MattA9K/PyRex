@@ -15,7 +15,7 @@ Listen to your default input source i.e. Microphone and save it to a .wav file.
 
 
 ### Overview
-##### listen_audio.py
+#####                listen_audio.py
 
 ```python
 import pyaudio
@@ -57,3 +57,7 @@ wf.setframerate(RATE)
 wf.writeframes(b''.join(frames))
 wf.close()
 ```
+
+##### run:
+
+`python3 listen_audio.py`
