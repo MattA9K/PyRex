@@ -14,7 +14,7 @@ Listen to your default input source i.e. Microphone and save it to a .wav file.
 `pip3 install pyaudio`
 
 
-`python
+```python
 import pyaudio
 import wave
 
@@ -53,4 +53,4 @@ wf.setsampwidth(p.get_sample_size(FORMAT))
 wf.setframerate(RATE)
 wf.writeframes(b''.join(frames))
 wf.close()
-`
+```
