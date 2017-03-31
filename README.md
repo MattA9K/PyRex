@@ -56,6 +56,23 @@ wf.setsampwidth(p.get_sample_size(FORMAT))
 wf.setframerate(RATE)
 wf.writeframes(b''.join(frames))
 wf.close()
+
+```
+
+#####  Convert Output File to ByteString:
+```python
+def bytesfromfile(f):
+    while True:
+        raw = array.array('B')
+        raw.fromstring(f.read(8192))
+        if not raw:
+            break
+        yield raw
+        
+        
+with open(f_in, 'rb') as fd_in:
+    for byte in bytesfromfile(fd_in):
+        # do stuff
 ```
 
 ##### run:
